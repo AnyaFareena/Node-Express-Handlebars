@@ -1,79 +1,91 @@
-h1{
-    text-align: center;
-    color: 000000;  
-    font-size: 55px;
-    height: 60px;
-    border-radius: 4px;
-    margin-top: 39px;
-    padding: 0%;
-    align-content: center;
-}
-.heading{
-    width: 500px;
-    margin: 0 auto;
-    overflow: auto;
-}
-.heading1{
-    padding-top: 2%
-}
-.burger_home{
-    height: 300px;
-    width: 500px;
-}
-
-p, .devoured{
-    
-    font-size: 24px;
-}
-
-.content-burger_list {
-    display: flex;
-    justify-content: space-between;
-    background: #ffffb3;
-    padding: 10px;
-    height: 60px;
-    border-radius: 4px;
-    margin-top: 20px;
-    width: 415px
-}
-
-.content {
-    width: 500px;
-    margin: 0 auto;
-    overflow: auto;
-
-}
-img {
-    height: 70px;
-    border-radius: 4px;
-}
-.btn-success{
-    height: 60px;
-    border-radius: 4px;
-    margin-top: 20px;
-}
-
-.form-control{
-    height: 60px;
-    border-radius: 4px;
-    margin-top: 20px;
-    width: 412px;
-}
-
-.col-6{
-    float: left;
-    align-content: center;
-    margin-left: 12%;
-    font-size: 153%;
-
-}
-
 body{
-/* background-repeat:no-repeat; */
-background-position: center;
-background-size: 100%;
-background-attachment: fixed;
-}
-body, html {
-    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background:rgb(241, 221, 128);
+    padding:0;
   }
+  
+  li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .create-form {
+    padding: 5px;
+    margin: 5px;
+    background: rgb(170, 223, 223);
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+  .pageHead {
+    font-size: 40px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  }
+  .burgerListsSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+  }
+  .burgerItem {
+    box-sizing: border-box;
+    width: 200px;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+    font-size:20px;
+    padding:0.5em 0 .5em 0;
+    border-radius: 10px;
+    background:rgb(209, 147, 136)
+  
+  }
+  .devourButton {
+    width: 100px;
+    height: 30px;
+    font-size:14px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: lightgrey;
+  }
+  .burgerList {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .burgerItem.devoured{
+    background:rgb(165, 156, 189);
+    color:rgb(88, 88, 88);
+  
+  }
+  #ca{
+    height:25px;
+  }
+  button {
+    box-sizing: border-box;
+  }
+  ul{
+    padding:0;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height:100px;
+  }  

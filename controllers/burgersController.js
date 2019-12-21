@@ -1,46 +1,35 @@
-var express = require("express");
-var router = express.Router();
-var burger = require("../models/burger");
+const express = require("express");
+const burger = require("../models/burger.js");
 
-// Create all our routes and set up logic within those routes where required.
-router.get("/", function (req, res) {
-  burger.selectAll(function (burgers) {
-    var hbsObject = {
-      burgers: burgers
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
-  });
+const router = express.Router();
 
-
-});
-
-router.post("/burgers/insertOne", function (req, res) {
-  burger.insertOne(
-    req.body.burger_name, function (result) {
-      res.redirect('/');
-    })
-});
-
-
-router.delete("/:id", function (req, res) {
-  var id = req.params.id;
-
-  burger.deleteOne(id, function (result) {
-
-    console.log(result);
-    res.redirect('/');
-  });
-
-});
-
-router.put("/burgers/update", function (req, res) {
-  burger.updateOne(
-    req.body.burger_id, function (result) {
-      console.log(result);
-      res.redirect('/');
+router.get("/", (req, res)=>{
+    burger.all((data)=>{
+        console.log(data);
+        res.render("index",{
+            burgers:data
+        });
     });
-
 });
-// Export routes for server.js to use.
+
+router.post("/api/burgers", (req,res)=>{
+    burger.create([req.body.burger_name, req.body.devoured], (result)=>{
+        res.json({burger_name:result.burger_name, devoured:0});
+    });
+});
+
+router.put("/api/burgers/:id", (req,res)=>{
+    console.log("HERE!: "+req.params.id);
+    console.log(req.body);
+
+    burger.update(req.params.id, req.body, (result)=>{
+        if (result.changedRows === 0) {
+            // If no rows were changed, then the ID must not exist, so 404
+            return res.status(404).end();
+          }
+          console.log(result);
+          res.status(200).end();
+    });
+});
+
 module.exports = router;
