@@ -1,1 +1,79 @@
-/* add your css here */
+h1{
+    text-align: center;
+    color: 000000;  
+    font-size: 55px;
+    height: 60px;
+    border-radius: 4px;
+    margin-top: 39px;
+    padding: 0%;
+    align-content: center;
+}
+.heading{
+    width: 500px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.heading1{
+    padding-top: 2%
+}
+.burger_home{
+    height: 300px;
+    width: 500px;
+}
+
+p, .devoured{
+    
+    font-size: 24px;
+}
+
+.content-burger_list {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffb3;
+    padding: 10px;
+    height: 60px;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 415px
+}
+
+.content {
+    width: 500px;
+    margin: 0 auto;
+    overflow: auto;
+
+}
+img {
+    height: 70px;
+    border-radius: 4px;
+}
+.btn-success{
+    height: 60px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.form-control{
+    height: 60px;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 412px;
+}
+
+.col-6{
+    float: left;
+    align-content: center;
+    margin-left: 12%;
+    font-size: 153%;
+
+}
+
+body{
+/* background-repeat:no-repeat; */
+background-position: center;
+background-size: 100%;
+background-attachment: fixed;
+}
+body, html {
+    width: 100%;
+  }
