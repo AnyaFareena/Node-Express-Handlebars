@@ -3,6 +3,4 @@ insert into burgers
 values
     ('Smokehouse', false),
     ('Parisian', false),
-    ('Old-fashioned', false),
-    ('Californian', false),
     ('Spicy Jalapeño', false);
