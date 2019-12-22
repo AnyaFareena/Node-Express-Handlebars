@@ -59,6 +59,7 @@ body{
     border: 1px solid black;
     border-radius: 10px;
     color: lightgrey;
+    background: mediumaquamarine;
   }
   .burgerList {
     min-width: 300px;
